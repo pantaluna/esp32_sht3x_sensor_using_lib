@@ -1,5 +1,15 @@
 ## Project Description
-This project demonstrates the basics of using the MJD ESP-IDF component "mjd_sht3x" for the ESP32 and the popular breakout boards of the **Sensirion SHT3x Relative Humidity and Temperature Sensor** using the **I2C Bus**.
+This project demonstrates the basics of using the MJD ESP-IDF component "mjd_sht3x" for the ESP32 and the popular breakout boards of **the Sensirion SHT3x Relative Humidity and Temperature Sensor product range** and the **Sensirion SHT85 product** using the **I2C Bus**.
+
+These are a few products of that range:
+
+- SHT30-DIS-B
+- SHT31-DIS-B
+- SHT31-DIS-F
+- SHT31-DIS-P
+- SHT35-DIS-B
+- SHT35-DIS-F
+- SHT85
 
 Go to the component directory "**components/mjd_sht3x**" for more documentation, suggested breakout boards (if relevant), installation and wiring instructions, data sheets, FAQ, photo's, etc.
 

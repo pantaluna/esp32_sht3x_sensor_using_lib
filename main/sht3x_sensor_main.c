@@ -3,6 +3,7 @@
 
 /*
  * Logging
+ *
  */
 static const char TAG[] = "myapp";
 
@@ -57,7 +58,7 @@ void peripheral_task(void *pvParameter) {
         sht3x_config.i2c_port_num = MY_SHT3X_I2C_MASTER_PORT_NUM;
         sht3x_config.i2c_scl_gpio_num = MY_SHT3X_I2C_SCL_GPIO_NUM;
         sht3x_config.i2c_sda_gpio_num = MY_SHT3X_I2C_SDA_GPIO_NUM;
-        // @tip Omit the following line if you want to use the default Repeatability
+// @tip Omit the following line if you want to use the default Repeatability
             sht3x_config.repeatability = MY_SHT3X_SHT3X_REPEATABILITY;
 
             f_retval = mjd_sht3x_init(&sht3x_config);
@@ -102,8 +103,8 @@ void peripheral_task(void *pvParameter) {
             // CONTINUE
             continue;
         }
-        ESP_LOGI(TAG, "    RelHum: %7.3f | Temp C: %7.3f | Temp F: %7.3f | DewPoint C: %7.3f", sht3x_data.relative_humidity,
-                sht3x_data.temperature_celsius, sht3x_data.temperature_fahrenheit, sht3x_data.dew_point_celsius);
+        ESP_LOGI(TAG, "    RelHum: %7.3f | Temp C: %7.3f | DewPoint C: %7.3f | Temp F: %7.3f", sht3x_data.relative_humidity,
+                sht3x_data.temperature_celsius, sht3x_data.dew_point_celsius, sht3x_data.temperature_fahrenheit);
 
         sum_rh += sht3x_data.relative_humidity;
         if (sht3x_data.relative_humidity < min_rh) {
